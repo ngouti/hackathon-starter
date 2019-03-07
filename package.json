@@ -28,21 +28,6 @@
     "url": "https://github.com/arundo/react-shell/issues",
     "email": "support@arundo.com"
   },
-  "dependencies": {
-    "apicache": "^1.4.0",
-    "app-root-path": "^2.1.0",
-    "body-parser": "^1.18.3",
-    "compression": "^1.7.3",
-    "cookie-parser": "^1.4.4",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "express-session": "^1.15.6",
-    "globby": "^9.0.0",
-    "heroku-ssl-redirect": "^0.0.4",
-    "isomorphic-fetch": "^2.2.1",
-    "serve-favicon": "^2.5.0",
-    "supergeneric": "^1.1.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
