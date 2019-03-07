@@ -1,0 +1,46 @@
+$mobile: 35rem;
+
+@import './base';
+
+#app {
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+  min-height: 100%;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 100%;
+
+  > * {
+    display: flex;
+  }
+}
+
+header, footer {
+  flex: 0 1rem;
+}
+
+.main {
+  flex: auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1.5rem;
+}
+
+.hide-mobile {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+@import './header';
+@import './footer';
+@import './missing';

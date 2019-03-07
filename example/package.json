@@ -1,0 +1,39 @@
+{
+  "name": "react-shell-demo",
+  "version": "1.0.0",
+  "description": "Test implementation of react-shell components",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "build",
+    "dev": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/arundo/react-shell.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arundo/react-shell/issues"
+  },
+  "homepage": "https://github.com/arundo/react-shell#readme",
+  "devDependencies": {
+    "@arundo/spa-builder": "^1.7.0",
+    "@reach/router": "^1.2.1",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-icons": "^3.4.0"
+  },
+  "title": "Arundo App",
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "target": "esnext",
+  "heroku-run-build-script": true,
+  "dependencies": {
+    "@arundo/express-starter": "^1.2.0"
+  }
+}

@@ -1,0 +1,39 @@
+$spaceBetweenNavItems: 0.5em;
+
+header {
+  flex: 0 auto;
+  padding: 0.9rem 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #4ae;
+  }
+
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    > * {
+      &:not(:first-child) {
+        border-left: 1px solid #ccc;
+        margin-left: $spaceBetweenNavItems;
+        padding-left: $spaceBetweenNavItems;
+      }
+    }
+  }
+}
