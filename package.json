@@ -1,6 +1,6 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Core functionality for Arundo React apps",
   "engines": {
     "node": ">=11.0.0"
