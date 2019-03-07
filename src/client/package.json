@@ -1,6 +1,6 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Core functionality for Arundo React apps",
   "engines": {
     "node": ">=11.0.0"
@@ -13,8 +13,8 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prebuild": "rm -rf dist",
     "build": "babel src --ignore '**/*.spec.js' --out-dir dist -d",
-    "prepublish": "cp ../package.json package.json",
-    "postpublish": "cp package.json ../package.json"
+    "prepublish": "cp ../../package.json package.json",
+    "postpublish": "cp package.json ../../package.json && cd ../.."
   },
   "author": "Kevin R. Whitley <kevin.whitley@arundo.com>",
   "license": "UNLICENSED",
