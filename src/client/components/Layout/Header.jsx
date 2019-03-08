@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import './Header.scss'
+import * as logo from '../../images/arundo-logo.svg'
 
-export default function Header() {
-  return (
-    <header>
-      <div className="title">Arundo</div>
+export const Header = () =>
+  <header>
+    <img className="logo" src={logo} />
 
-      <nav>
-        <Link to="/somewhere">Page1</Link>
-        <a href="/login">Log In</a>
-      </nav>
-    </header>
-  )
-}
+    <nav>
+      <Link to="/somewhere">Page1</Link>
+      <a href="/login">Log In</a>
+    </nav>
+  </header>

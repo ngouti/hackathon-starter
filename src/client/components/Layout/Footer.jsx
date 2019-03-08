@@ -1,9 +1,7 @@
 import React from 'react'
+import './Footer.scss'
 
-export default function Footer() {
-  return (
-    <footer>
-      &copy;2018 Arundo Analytics
-    </footer>
-  )
-}
+export const Footer = () =>
+  <footer>
+    &copy;2018 Arundo Analytics
+  </footer>

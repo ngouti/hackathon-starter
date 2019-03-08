@@ -1,13 +1,19 @@
 $spaceBetweenNavItems: 0.5em;
 
 header {
-  flex: 0 auto;
+  flex: auto;
   padding: 0.9rem 1rem 1rem;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  .logo {
+    flex: 0 auto;
+    height: 1.4rem;
+    align-self: flex-start;
+  }
 
   .title {
     font-size: 1.3rem;

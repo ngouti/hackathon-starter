@@ -1,4 +1,8 @@
 import React from 'react'
-import Page from 'Layout/Page'
+import { Page } from 'Layout/Page'
 
-export default () => <Page>Somewhere</Page>
+export default function Somewhere() {
+  return (
+    <Page>Somewhere</Page>
+  )
+}

@@ -1,13 +1,18 @@
 import React from 'react'
 import classNames from 'classnames'
+import './Page.scss'
 
-export default ({ children, visible = true, className, back, style, ...props }) => {
-  return (
-    <div
-      className={classNames('page', className)}
-      style={style}
-    >
-      { visible && children }
-    </div>
-  )
-}
+export const Page = ({
+  children,
+  visible = true,
+  className,
+  back,
+  style,
+  ...props,
+}) =>
+  <div
+    className={classNames('page', className)}
+    style={style}
+  >
+    { visible && children }
+  </div>

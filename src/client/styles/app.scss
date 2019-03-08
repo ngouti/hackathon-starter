@@ -17,22 +17,12 @@ $mobile: 35rem;
 
   > * {
     display: flex;
+    flex: auto;
   }
-}
 
-header, footer {
-  flex: 0 1rem;
-}
-
-.main {
-  flex: auto;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 1.5rem;
+  header, footer {
+    flex: 0 auto;
+  }
 }
 
 .hide-mobile {
@@ -40,7 +30,3 @@ header, footer {
     display: none;
   }
 }
-
-@import './header';
-@import './footer';
-@import './missing';
