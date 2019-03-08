@@ -1,23 +1,16 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Core functionality for Arundo React apps",
   "engines": {
-    "node": ">=11.0.0"
+    "node": ">=10.0.0"
   },
   "main": "index.js",
   "target": "esnext",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "dev",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "prebuild": "rm -rf dist",
-    "build": "babel src --ignore '**/*.spec.js' --out-dir dist -d",
-    "prepublish": "cd src/client && cp ../../package.json package.json",
-    "postpublish": "cp package.json ../../package.json && cd ../.."
-  },
-  "bin": {
-    "release": "./bin/release.js"
+    "release": "node bin/release.js",
+    "dev": "dev"
   },
   "author": "Kevin R. Whitley <kevin.whitley@arundo.com>",
   "license": "UNLICENSED",
@@ -51,6 +44,7 @@
     "fs-extra": "^7.0.1",
     "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^6.0.2",
+    "np": "^4.0.2",
     "nyc": "^13.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
@@ -61,7 +55,5 @@
     "@reach/router": "^1.2.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
-  },
-  "title": "Arundo App",
-  "heroku-run-build-script": true
+  }
 }

@@ -5,6 +5,5 @@ dist
 .env
 .fusebox
 .dist-dev
-.npmrc
 .sessions
 yarn-error.log
