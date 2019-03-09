@@ -6,4 +6,5 @@ dist
 .fusebox
 .dist-dev
 .sessions
+.dist
 yarn-error.log

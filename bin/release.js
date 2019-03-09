@@ -9,9 +9,6 @@ const fs = require('fs-extra')
 const Promise = require('bluebird')
 const path = require('path')
 
-const rootFolder = path.join(__dirname, '..')
-const clientFolder = path.join(__dirname, '../src/client')
-const distFolder = path.join(__dirname, '../dist')
 const cmdAsync = Promise.promisify(cmd.get, { multiArgs: true, context: cmd })
 const distPkg = JSON.parse(JSON.stringify(pkg))
 const errors = []
@@ -21,9 +18,13 @@ const hasErrors = () => errors.length > 0
 
 release
   .version(pkg.version)
-  .option('-M, --major', 'Major release X.#.# for breaking changes')
-  .option('-m, --minor', 'Minor release #.X.# non-breaking for feature additions')
-  .option('-p, --patch', 'Patch release #.#.X for patch fixes/tweaks')
+  .option('-M, --major', 'major release X.#.# for breaking changes')
+  .option('-m, --minor', 'minor release #.X.# non-breaking for feature additions')
+  .option('-p, --patch', 'patch release #.#.X for patch fixes/tweaks')
+  .option('-s, --source <dir>', 'directory to build/release from')
+  .option('-t, --temp <dir>', 'temporary build directory (default=.dist)')
+  .option('-d, --dry', 'build, but do not publish')
+  .option('-l, --leave', 'leave build folder after publishing')
   .parse(process.argv)
 
 let releaseType =
@@ -32,10 +33,19 @@ let releaseType =
   (release.patch && 'patch') ||
   undefined
 
+let targetFolder = release.source || 'src/client'
+let releaseFolder = release.temp || '.dist'
+
+console.log('sourceFolder', targetFolder)
+
 // return --help if no release style specified
 if (!releaseType) {
   return release.outputHelp()
 }
+
+const rootFolder = path.join(__dirname, '..')
+const sourceFolder = path.join(__dirname, '../' + targetFolder)
+const distFolder = path.join(__dirname, '../', releaseFolder)
 
 async function runRelease() {
   console.log('releasing to', distFolder)
@@ -46,7 +56,7 @@ async function runRelease() {
   await fs.ensureDir(distFolder)
 
   // copy client to dist folder
-  !hasErrors() && await fs.copy(clientFolder, distFolder).catch(logError)
+  !hasErrors() && await fs.copy(sourceFolder, distFolder).catch(logError)
 
   // copy .npmrc to dist folder
   !hasErrors() && await fs.copy(`${rootFolder}/.npmrc`, `${distFolder}/.npmrc`).catch(logError)
@@ -61,13 +71,19 @@ async function runRelease() {
           .catch(console.log)
 
   // update version and publish
-  process.chdir('./dist')
+  process.chdir('./' + releaseFolder)
   await cmdAsync(`npm version ${releaseType}`)
   const { version, name } = require(`${distFolder}/package.json`)
   console.log(chalk.green(`publishing ${name} --> v${version}`))
 
-  // publish
-  await cmdAsync(`yarn publish --new-version ${version}`).catch(logError)
+  if (release.dry) {
+    console.log(chalk.yellow(`dry-run complete... skipping publish`))
+  } else {
+    // publish
+    await cmdAsync(`yarn publish --new-version ${version}`).catch(logError)
+  }
+
+  release.leave !== true && await fs.remove(distFolder)
 
   if (hasErrors()) {
     console.log(chalk.yellow(`\n${errors.length} errors...`))
