@@ -36,42 +36,44 @@ let releaseType =
 let targetFolder = release.source || 'src/client'
 let releaseFolder = release.temp || '.dist'
 
-console.log('sourceFolder', targetFolder)
-
 // return --help if no release style specified
-if (!releaseType) {
-  return release.outputHelp()
-}
+if (!releaseType) return release.outputHelp()
 
 const rootFolder = path.join(__dirname, '..')
 const sourceFolder = path.join(__dirname, '../' + targetFolder)
 const distFolder = path.join(__dirname, '../', releaseFolder)
 
 async function runRelease() {
-  console.log('releasing to', distFolder)
   // empty any previous distribution
+  console.log(chalk.gray(`emptying ${releaseFolder}...`))
   await fs.emptyDir(distFolder).catch(logError)
 
-  // ensure /dist directory exists
+  // ensure release directory exists
+  console.log(chalk.gray(`ensuring ${releaseFolder} exists...`))
   await fs.ensureDir(distFolder)
 
   // copy client to dist folder
+  console.log(chalk.gray(`copying ${targetFolder} to ${releaseFolder}...`))
   !hasErrors() && await fs.copy(sourceFolder, distFolder).catch(logError)
 
   // copy .npmrc to dist folder
+  console.log(chalk.gray(`copying .npmrc...`))
   !hasErrors() && await fs.copy(`${rootFolder}/.npmrc`, `${distFolder}/.npmrc`).catch(logError)
 
-  console.log('current dir:', __dirname)
+  // clean up package.json before writing
+  console.log(chalk.gray(`cleaning package.json...`))
   delete distPkg.devDependencies
   delete distPkg.scripts
 
   // write modified package.json
+  console.log(chalk.gray(`writing package.json...`))
   await fs.writeJson(`${distFolder}/package.json`, distPkg, { spaces: 2 })
           .then(() => console.log(`created ${distFolder}/package.json`))
           .catch(console.log)
 
   // update version and publish
   process.chdir('./' + releaseFolder)
+  console.log(chalk.gray(`updating ${releaseType} version...`))
   await cmdAsync(`npm version ${releaseType}`)
   const { version, name } = require(`${distFolder}/package.json`)
   console.log(chalk.green(`publishing ${name} --> v${version}`))
