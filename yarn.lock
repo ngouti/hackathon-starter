@@ -718,6 +718,19 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@supergeneric/yarn-release@^1.0.31":
+  version "1.0.31"
+  resolved "https://registry.yarnpkg.com/@supergeneric/yarn-release/-/yarn-release-1.0.31.tgz#75d30abec0171f6d423e0e69e73e9f628902d152"
+  integrity sha512-SdeqgmWyipJ04sl1eKxA6H5wNxl967FSZJ+gColhrzY2hjVj57PoZJzhUF1+NMn2wGFjtQmH4VXrfM3oO+90+A==
+  dependencies:
+    app-root-path "^2.1.0"
+    bluebird "^3.5.3"
+    chalk "^2.4.2"
+    commander "^2.19.0"
+    fs-extra "^7.0.1"
+    node-cmd "^3.0.0"
+    np "^4.0.2"
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
