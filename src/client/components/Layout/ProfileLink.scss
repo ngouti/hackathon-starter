@@ -1,0 +1,15 @@
+$iconSize: 1.3em;
+
+.profile-link {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  cursor: default;
+
+  .icon {
+    border-radius: 2em;
+    width: $iconSize;
+    height: $iconSize;
+    margin-right: 0.5em;
+  }
+}

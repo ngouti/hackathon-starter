@@ -8,10 +8,11 @@ export const Page = ({
   className,
   back,
   style,
+  centeredMessage,
   ...props,
 }) =>
   <div
-    className={classNames('page', className)}
+    className={classNames('page', centeredMessage && 'centered-message', className)}
     style={style}
   >
     { visible && children }

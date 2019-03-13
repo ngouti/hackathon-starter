@@ -11,6 +11,7 @@
     "start": "node dist/server.js",
     "release:major": "release --minor --src=src/client",
     "release:patch": "release --patch --src=src/client",
+    "verify": "release --patch --src=src/client --test --nocleanup --verbose",
     "dev": "dev"
   },
   "author": "Kevin R. Whitley <kevin.whitley@arundo.com>",
@@ -22,6 +23,11 @@
   "bugs": {
     "url": "https://github.com/arundo/react-shell/issues",
     "email": "support@arundo.com"
+  },
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "auth0-js": "^9.10.0",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@arundo/express-starter": "^1.2.0",
@@ -43,6 +49,7 @@
     "commander": "^2.19.0",
     "coveralls": "^3.0.3",
     "eslint": "^5.14.1",
+    "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^6.0.2",
@@ -54,7 +61,6 @@
     "react-icons": "^3.4.0"
   },
   "peerDependencies": {
-    "@reach/router": "^1.2.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   }

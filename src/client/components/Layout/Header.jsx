@@ -1,14 +1,25 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import { useAuth } from '../../hooks'
+import { ProfileLink } from './ProfileLink'
 import './Header.scss'
 import * as logo from '../../images/arundo-logo.svg'
 
-export const Header = () =>
-  <header>
-    <img className="logo" src={logo} />
+export const Header = () => {
+  let { user, isLoggedIn } = useAuth()
 
-    <nav>
-      <Link to="/somewhere">Page1</Link>
-      <a href="/login">Log In</a>
-    </nav>
-  </header>
+  return (
+    <header>
+      <img className="logo" src={logo} />
+
+      <nav>
+        { user && <ProfileLink user={user} />}
+        {
+          isLoggedIn
+          ? <Link to="/auth/logout">Log Out</Link>
+          : <Link to="/auth/login">Log In</Link>
+        }
+      </nav>
+    </header>
+  )
+}
