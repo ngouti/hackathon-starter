@@ -682,6 +682,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@kwhitley/use-store@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@kwhitley/use-store/-/use-store-1.0.3.tgz#1ed9a96b605f8892c3c0f0c3a06d0e03f51f6297"
+  integrity sha512-1oOrjspYhDFoZQuza7wPeO36ra+rqAOPdMGNYDOqHC9ysSibFTyUR1N5kBH9S/USR7gHq2xW0uYSw4dwQM8UGg==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

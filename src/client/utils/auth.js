@@ -1,7 +1,9 @@
 import auth0 from 'auth0-js'
 import { navigate } from '@reach/router'
 import axios from './axios'
-import { globalStore } from '../hooks/store'
+import { globalStore } from '@kwhitley/use-store'
+
+window.axios = axios
 
 globalStore
   .set('user',
@@ -22,10 +24,10 @@ export class Auth {
   //need to figure out best way to pass domain/clientID/redirectURI as this will be pre-compiled in the docker image
   //also, the audience is essential for getting back the right auth token
   auth0 = new auth0.WebAuth({
-    domain: 'arundo-develop.auth0.com',
-    clientID: 'zSWL2GxGu4ONSGRvyxbkqiLNU7MAYdYE',
+    domain: 'arundo-develop.auth0.com', // ENV
+    clientID: 'zSWL2GxGu4ONSGRvyxbkqiLNU7MAYdYE', // ENV
+    audience: 'https://develop.arundo.com', // ENV
     redirectUri: `${location.origin}/auth/login`,
-    audience: 'https://develop.arundo.com',
     responseType: 'token id_token',
     scope: 'openid email profile'
   })
@@ -68,7 +70,8 @@ export class Auth {
 
     this.scheduleLogout()
     // navigate to the home route
-    navigate('/auth/login')
+    // console.log('auth.returnTo', this.returnTo)
+    // navigate(this.returnTo || '/')
   }
 
   renewSession() {

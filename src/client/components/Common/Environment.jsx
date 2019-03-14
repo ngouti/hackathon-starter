@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Page from 'Layout/Page'
+import Page from '../Layout/Page'
 
 export default function Environment({
   message = "Ooops, that page was not found!",

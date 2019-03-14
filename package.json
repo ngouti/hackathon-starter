@@ -25,6 +25,7 @@
     "email": "support@arundo.com"
   },
   "dependencies": {
+    "@kwhitley/use-store": "^1.0.3",
     "@reach/router": "^1.2.1",
     "auth0-js": "^9.10.0",
     "axios": "^0.18.0"
