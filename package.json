@@ -1,6 +1,6 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.3.14",
+  "version": "1.3.16",
   "description": "Core functionality for Arundo React apps",
   "engines": {
     "node": ">=10.0.0"
@@ -9,9 +9,11 @@
   "target": "esnext",
   "scripts": {
     "start": "node dist/server.js",
-    "release:major": "release --minor --src=src/client",
-    "release:patch": "release --patch --src=src/client",
-    "verify": "release --patch --src=src/client --test --nocleanup --verbose",
+    "prebuild": "rm -rf build",
+    "build": "babel src/client --ignore '**/*.spec.js' --out-dir build -d",
+    "release:major": "yarn build && release --major --src=src/client --push",
+    "release:min": "yarn build && release --minor --src=src/client --push",
+    "release:patch": "yarn build && release --patch --src=src/client --push",
     "dev": "dev"
   },
   "author": "Kevin R. Whitley <kevin.whitley@arundo.com>",
@@ -25,21 +27,23 @@
     "email": "support@arundo.com"
   },
   "dependencies": {
-    "@kwhitley/use-store": "^1.0.3",
+    "@kwhitley/use-store": "^1.0.5",
     "@reach/router": "^1.2.1",
     "auth0-js": "^9.10.0",
     "axios": "^0.18.0"
   },
   "devDependencies": {
     "@arundo/express-starter": "^1.2.0",
-    "@arundo/spa-builder": "^1.7.1",
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/node": "^7.0.0",
+    "@arundo/spa-builder": "^1.7.3",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@kwhitley/yarn-release": "^1.3.2",
     "@reach/router": "^1.2.1",
-    "@supergeneric/yarn-release": "^1.0.31",
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
     "bluebird": "^3.5.3",
@@ -49,7 +53,7 @@
     "classnames": "^2.2.6",
     "commander": "^2.19.0",
     "coveralls": "^3.0.3",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "jsdoc-to-markdown": "^4.0.1",
@@ -57,9 +61,9 @@
     "np": "^4.0.2",
     "nyc": "^13.3.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-icons": "^3.4.0"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-icons": "^3.5.0"
   },
   "peerDependencies": {
     "react": "^16.8.4",
