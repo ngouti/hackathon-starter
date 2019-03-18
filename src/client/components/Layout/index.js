@@ -1,2 +1,4 @@
-export { default as Header } from './Header'
-export { default as Footer } from './Footer'
+export * from './Header'
+export * from './Footer'
+export * from './Page'
+export * from './ProfileLink'

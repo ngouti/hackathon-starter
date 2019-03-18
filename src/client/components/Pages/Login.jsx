@@ -1,10 +1,9 @@
 import React from 'react'
-import { Page } from '../Layout/Page'
-import { Inspect } from '../Common/Inspect'
-import { useAuth } from '../../hooks'
 import { navigate } from '@reach/router'
+import { Page } from '../Layout/Page'
+import { useAuth } from '../../hooks'
 
-export default function Login() {
+export function Login() {
   let { user, isLoggedIn } = useAuth({ required: true })
 
   if (isLoggedIn) {

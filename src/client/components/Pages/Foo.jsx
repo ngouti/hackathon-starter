@@ -1,10 +1,10 @@
 import React from 'react'
 import { Page } from '../Layout/Page'
 
-export function Home() {
+export function Foo() {
   return (
-    <Page>
-      <h1>Home</h1>
+    <Page centeredMessage>
+      <h1>Foo</h1>
     </Page>
   )
 }

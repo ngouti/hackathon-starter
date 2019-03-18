@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import './Page.scss'
 
-export const Page = ({
+export function Page ({
   children,
   visible = true,
   className,
@@ -10,10 +10,15 @@ export const Page = ({
   style,
   centeredMessage,
   ...props,
-}) =>
-  <div
-    className={classNames('page', centeredMessage && 'centered-message', className)}
-    style={style}
-  >
-    { visible && children }
-  </div>
+}) {
+  return (
+    <div
+      className={classNames('page', centeredMessage && 'centered-message', className)}
+      style={style}
+      {...props}
+    >
+      { visible && children }
+    </div>
+  )
+}
+
