@@ -17,11 +17,7 @@ export const LayoutVertical = ({ children, className, ...props }) => {
     <div className={classNames('layout vertical', className)}>
       <Header />
 
-      <Router>
-        <Login path="login" />
-        <Logout path="logout" />
-        <Content path="pages" inside={children} />
-      </Router>
+      { children }
 
       <Footer />
     </div>

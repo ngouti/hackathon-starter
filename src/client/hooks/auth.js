@@ -41,10 +41,15 @@ export function useAuth(config = {}) {
                               navigate('/')
                             })
 
+  let loginAction = () => {
+    localStorage.setItem(AUTH0_RETURNTO_KEY, location.pathname)
+    return auth.login()
+  }
+
   return {
     user: user.profile,
     isLoggedIn: user.isLoggedIn,
-    loginAction: auth.login,
+    loginAction,
     logoutAction,
     error,
   }

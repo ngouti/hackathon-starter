@@ -21,10 +21,10 @@
     serve-favicon "^2.5.0"
     supergeneric "^1.1.0"
 
-"@arundo/spa-builder@^1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@arundo/spa-builder/-/spa-builder-1.7.3.tgz#07d31ced80f63d0f4f241bea21bbfdd1befc2577"
-  integrity sha512-2UnqZmlNJo/cKrpd4iYKxQkIxu/RwyhLAXbGFnv4mO7yFbQz0bjIT5+o8Ai+KNRYqGboMjSq1dpxaCCBuajyzQ==
+"@arundo/spa-builder@^1.7.5":
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/@arundo/spa-builder/-/spa-builder-1.7.5.tgz#bf6f244eaeda000909890d66712a656b4f1c408d"
+  integrity sha512-BA8P77gU1Yqnn9uILCD4DnWIVihanOF2r9u487NxofL6lurkJpQ0pJakNKMZttABgf4a2/9I+bbglQtPAcNnZw==
   dependencies:
     app-root-path "^2.1.0"
     chai "^4.2.0"

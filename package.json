@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "prebuild": "rm -rf build",
-    "build": "babel src/client --ignore '**/*.spec.js' --out-dir build -d",
+    "build:components": "babel src/client --ignore '**/*.spec.js' --out-dir build -d",
     "release:major": "yarn build && release --major --src=src/client --push",
     "release:min": "yarn build && release --minor --src=src/client --push",
     "release:patch": "yarn build && release --patch --src=src/client --push",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@arundo/express-starter": "^1.2.0",
-    "@arundo/spa-builder": "^1.7.3",
+    "@arundo/spa-builder": "^1.7.5",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",

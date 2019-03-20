@@ -4,9 +4,10 @@ import { useAuth } from '../../hooks'
 import { ProfileLink } from './ProfileLink'
 import './Header.scss'
 import * as logo from '../../images/arundo-logo.svg'
+import auth from '../../utils/auth'
 
 export const Header = () => {
-  let { user, isLoggedIn } = useAuth()
+  let { user, isLoggedIn, loginAction, logoutAction } = useAuth()
 
   return (
     <header>
@@ -16,8 +17,8 @@ export const Header = () => {
         { user && <ProfileLink user={user} />}
         {
           isLoggedIn
-          ? <Link to="/auth/logout">Log Out</Link>
-          : <Link to="/auth/login">Log In</Link>
+          ? <a onClick={logoutAction}>Log Out</a>
+          : <a onClick={loginAction}>Log In</a>
         }
       </nav>
     </header>

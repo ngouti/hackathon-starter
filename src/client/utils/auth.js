@@ -1,5 +1,4 @@
 import auth0 from 'auth0-js'
-import { navigate } from '@reach/router'
 import axios from './axios'
 import { globalStore } from '@kwhitley/use-store'
 
@@ -69,9 +68,6 @@ export class Auth {
     this.profile.initials = idTokenPayload.name.replace(/(\b[\w])[^\s]* ?/gi, '$1')
 
     this.scheduleLogout()
-    // navigate to the home route
-    // console.log('auth.returnTo', this.returnTo)
-    // navigate(this.returnTo || '/')
   }
 
   renewSession() {
@@ -103,6 +99,7 @@ export class Auth {
       this.idToken = null
       this.expiresAt = 0
       this.isLoggedIn = false
+      delete axios.defaults.headers.common['Authorization']
 
       // Remove isLoggedIn flag from localStorage
       globalStore.clear('user')
