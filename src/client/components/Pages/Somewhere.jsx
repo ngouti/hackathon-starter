@@ -4,8 +4,10 @@ import { Page } from 'Layout/Page'
 import { useAuth, axios } from '@arundo/react-auth'
 import 'react-virtualized/styles.css'
 import { List, AutoSizer, WindowScroller } from 'react-virtualized'
+import { Inspect } from '../Common/Inspect'
 
-const useTags = (isLoggedIn) => {
+const useTags = () => {
+  let { user, isLoggedIn } = useAuth({ required: true })
   let [ tags, setTags ] = useStore('tags', [], { persist: true })
   let [ isLoading, setIsLoading ] = useState(false)
 
@@ -13,14 +15,10 @@ const useTags = (isLoggedIn) => {
     if (isLoggedIn) {
       setIsLoading(true)
       axios
-        .get('https://gke-develop.arundo.com/v0/tags')
+        .get('https://dashboards.develop.arundo.com/api/v0/dashboards')
+        // .get('https://gke-develop.arundo.com/v0/tags')
         .then(({ data }) => {
-          console.log('data', data)
-          console.log('data.data', data.data.data)
-
-          setTags(data.data.data.map(r => ({
-            guid: r.guid,
-          })))
+          setTags(data.map(r => r.name))
           setIsLoading(false)
         })
     }
@@ -42,7 +40,7 @@ const rowRenderer = (list) => ({
       key={key}
       style={style}
     >
-      { list[index].guid }
+      <Inspect item={list[index]} />
     </div>
   )
 }
@@ -69,12 +67,12 @@ const VirtualizedList = ({ items }) => {
 }
 
 export default function Somewhere() {
-  let { isLoggedIn } = useAuth({ required: true })
-  let { isLoading, tags } = useTags(isLoggedIn)
+  // let { isLoggedIn } = useAuth({ required: true })
+  let { isLoading, tags } = useTags()
 
   console.log('tags.length', tags.length)
 
-  return isLoggedIn && (
+  return (
     <div className="virtualized">
       {
         !tags.length

@@ -4,6 +4,7 @@
   "description": "Core functionality for Arundo React apps",
   "main": "index.js",
   "target": "esnext",
+  "title": "React Shell",
   "scripts": {
     "start": "node dist/server.js",
     "prebuild": "rm -rf build",
@@ -29,9 +30,9 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@arundo/express-starter": "^1.2.0",
-    "@arundo/react-auth": "^1.1.0",
-    "@arundo/spa-builder": "^1.8.5",
+    "@arundo/express-starter": "^1.2.9",
+    "@arundo/react-auth": "^2.0.0",
+    "@arundo/spa-builder": "^1.9.8",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/node": "^7.2.2",
@@ -39,7 +40,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
-    "@kwhitley/yarn-release": "^1.4.0",
+    "@kwhitley/yarn-release": "^1.4.1",
     "@reach/router": "^1.2.1",
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",

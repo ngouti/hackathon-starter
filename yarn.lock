@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@arundo/express-starter@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@arundo/express-starter/-/express-starter-1.2.0.tgz#1354361928206e6434e9b54dc02b6ab814bffd15"
-  integrity sha512-WrLxcVUha1bA++CHRMWsm4Kh4LJ7i7GQdlQN+T2IYDSObbW1R0NoESmQxN60dcyaAK7MOtmXTet/T4gFT8raRw==
+"@arundo/express-starter@^1.2.9":
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@arundo/express-starter/-/express-starter-1.2.9.tgz#45c01c8d4221a58c29958c88e32dd810fb1131fb"
+  integrity sha512-YPjVUhdTHRJ0PnrpSXy2V/Qu3dAzaQGKh6LZcskFtRz2+7bRmMPplNH9JiG2QBnnntDy1FFWKXp4Ns2DwN1HaQ==
   dependencies:
     apicache "^1.4.0"
     app-root-path "^2.1.0"
@@ -21,24 +21,24 @@
     serve-favicon "^2.5.0"
     supergeneric "^1.1.0"
 
-"@arundo/react-auth@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@arundo/react-auth/-/react-auth-1.1.0.tgz#269961c065c0913b7c6d88f3eb836d3cebd44e94"
-  integrity sha512-iOCZIacPw6pzuyh6BGT/kKVyGSymy2AZdf5Ntg+XJcvmcHqKEphLyOP5/xzTd4AM9hbjNaFCw77avbyPiygePg==
+"@arundo/react-auth@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@arundo/react-auth/-/react-auth-2.0.0.tgz#9e02b8490b85d0115c429460171a8339ddddc7b4"
+  integrity sha512-sfbbIRSZPjDiLTI1k3kyTJDeopUI2pUUVAGeI366MgPFcbJ8w4CsoPQEqbeYEibfuyspI9/usGZOYoIasegS4A==
   dependencies:
     "@kwhitley/use-store" "^1.0.5"
     auth0-js "^9.10.1"
     axios "^0.18.0"
 
-"@arundo/spa-builder@^1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@arundo/spa-builder/-/spa-builder-1.8.5.tgz#1370f875d62dfbec680221ea8df25c63a5f04521"
-  integrity sha512-cxq7LiLL7jojHL9G/K9HbipZYO6rnoUl7ZcKf75CCa58Nz2jvdw9q50D03awcyGVaVbhIEAYY1KwwryqC+NeyQ==
+"@arundo/spa-builder@^1.9.8":
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/@arundo/spa-builder/-/spa-builder-1.9.8.tgz#26545285ebc2e8e6663a06d611546dad31ccf47f"
+  integrity sha512-u8TT+txNrXeXqi/UqeUiStZGH+BM39/D/pJ65g0Tnsa/8TB/N9dkDyikKdRL6Zsy0IDd0w+x+7EoDJBW99C1Rg==
   dependencies:
     app-root-path "^2.1.0"
     chai "^4.2.0"
     chalk "^2.4.2"
-    dotenv "^6.2.0"
+    dotenv "^7.0.0"
     fs-extra "^7.0.1"
     fuse-box "^3.7.1"
     fuse-test-runner "^1.0.16"
@@ -47,10 +47,10 @@
     mocha "^6.0.2"
     node-cmd "^3.0.0"
     node-sass "^4.11.0"
-    react-hot-loader "^4.7.2"
+    react-hot-loader "^4.8.0"
     rimraf "^2.6.3"
-    terser "^3.16.1"
-    typescript "^3.3.3333"
+    terser "^3.17.0"
+    typescript "^3.3.4000"
 
 "@babel/cli@^7.2.3":
   version "7.2.3"
@@ -849,10 +849,10 @@
   resolved "https://registry.yarnpkg.com/@kwhitley/use-store/-/use-store-1.0.5.tgz#ac46ae1ec33407fb17ed89df6b83a2d34fbe5a14"
   integrity sha512-dhKo4ORGO0AqG+GpxELYvyjWlvSiF0itGNN0Ui6Kx6ly+jSyKtmNMFtqe2191dAy+XPzmkRsJlUBgdQYz0AnwA==
 
-"@kwhitley/yarn-release@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@kwhitley/yarn-release/-/yarn-release-1.4.0.tgz#b7e7043742a02fc64e867ea021ec43d0b5c6d612"
-  integrity sha512-/ocUaHoiM4yTfzzVQ5X36Q/hgW97NW5a/iid93zj5iGXSqPwWyNYpWcjFW0mDXKkdSXSoYTcPBy4nbU98sBiYQ==
+"@kwhitley/yarn-release@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@kwhitley/yarn-release/-/yarn-release-1.4.1.tgz#58de7a20b07be9dcd1c064b07736e3c5f718ed05"
+  integrity sha512-a4MMs9+eDwYo6MaSye/CQQJnzvPRchKCt31qCdnvcxS8JE17eNr05TnkI940YsFlp/nxs9SOLbPjybUM5B7ldQ==
   dependencies:
     app-root-path "^2.1.0"
     bluebird "^3.5.3"
@@ -2345,7 +2345,7 @@ component-emitter@^1.2.0, component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
   integrity sha1-E3kY1teCg/ffemt8WmPhQOaUJeY=
 
-compressible@~2.0.14:
+compressible@~2.0.16:
   version "2.0.16"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.16.tgz#a49bf9858f3821b64ce1be0296afc7380466a77f"
   integrity sha512-JQfEOdnI7dASwCuSPWIeVYwc/zMsu/+tRhoUvEfXz2gxOA2DNjmG5vhtFdBlhWPPGo+RdT9S3tgc/uH5qgDiiA==
@@ -2353,15 +2353,15 @@ compressible@~2.0.14:
     mime-db ">= 1.38.0 < 2"
 
 compression@^1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/compression/-/compression-1.7.3.tgz#27e0e176aaf260f7f2c2813c3e440adb9f1993db"
-  integrity sha512-HSjyBG5N1Nnz7tF2+O7A9XUhyjru71/fwgNb7oIsEVHR0WShfs2tIS/EySLgiTe98aOK18YDlMXpzjCXY/n9mg==
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/compression/-/compression-1.7.4.tgz#95523eff170ca57c29a0ca41e6fe131f41e5bb8f"
+  integrity sha512-jaSIDzP9pZVS4ZfQ+TzvtiWhdpFhE2RDHz8QJkpX9SIpLq88VueF5jJw6t+6CUQcAoA6t+x89MLrWAqpfDE8iQ==
   dependencies:
     accepts "~1.3.5"
     bytes "3.0.0"
-    compressible "~2.0.14"
+    compressible "~2.0.16"
     debug "2.6.9"
-    on-headers "~1.0.1"
+    on-headers "~1.0.2"
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
@@ -2787,6 +2787,11 @@ dotenv@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+
+dotenv@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-7.0.0.tgz#a2be3cd52736673206e8a85fb5210eea29628e7c"
+  integrity sha512-M3NhsLbV1i6HuGzBUH8vXrtxOk+tWmzWKDMbAVSUp3Zsjm7ywFeuwrUXhmhQyRK1q5B5GGy7hcXPbj3bnfZg2g==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -5753,7 +5758,7 @@ on-finished@~2.3.0:
   dependencies:
     ee-first "1.1.1"
 
-on-headers@~1.0.1:
+on-headers@~1.0.1, on-headers@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
@@ -6336,7 +6341,7 @@ react-dom@^16.8.4:
     prop-types "^15.6.2"
     scheduler "^0.13.4"
 
-react-hot-loader@^4.7.2:
+react-hot-loader@^4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.8.0.tgz#0b7c7dd9407415e23eb8246fdd28b0b839f54cb6"
   integrity sha512-HY9F0vITYSVmXhAR6tPkMk240nxmoH8+0rca9iO2B82KVguiCiBJkieS0Wb4CeSIzLWecYx3iOcq8dcbnp0bxA==
@@ -7069,10 +7074,18 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.9, source-map-support@~0.5.9:
+source-map-support@^0.5.9:
   version "0.5.10"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.10.tgz#2214080bc9d51832511ee2bab96e3c2f9353120c"
   integrity sha512-YfQ3tQFTK/yzlGJuX8pTwa4tifQj4QS2Mj7UegOu8jAz59MqIiMGPXxQhVQiIMNzayuUSF/jEuVnfFF5JqybmQ==
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
+
+source-map-support@~0.5.10:
+  version "0.5.11"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.11.tgz#efac2ce0800355d026326a0ca23e162aeac9a4e2"
+  integrity sha512-//sajEx/fGL3iw6fltKMdPvy8kL3kJ2O3iuYlRoT3k9Kb4BjOoZ+BZzaNHeuaruSt+Kf3Zk9tnfAQg9/AJqUVQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -7454,14 +7467,14 @@ terminal-link@^1.2.0:
     ansi-escapes "^3.1.0"
     supports-hyperlinks "^1.0.1"
 
-terser@^3.16.1:
-  version "3.16.1"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-3.16.1.tgz#5b0dd4fa1ffd0b0b43c2493b2c364fd179160493"
-  integrity sha512-JDJjgleBROeek2iBcSNzOHLKsB/MdDf+E/BOAJ0Tk9r7p9/fVobfv7LMJ/g/k3v9SXdmjZnIlFd5nfn/Rt0Xow==
+terser@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-3.17.0.tgz#f88ffbeda0deb5637f9d24b0da66f4e15ab10cb2"
+  integrity sha512-/FQzzPJmCpjAH9Xvk2paiWrFq+5M6aVOf+2KRbwhByISDX/EujxsK+BAvrhb6H+2rtrLCHK9N01wO014vrIwVQ==
   dependencies:
-    commander "~2.17.1"
+    commander "^2.19.0"
     source-map "~0.6.1"
-    source-map-support "~0.5.9"
+    source-map-support "~0.5.10"
 
 test-exclude@^5.1.0:
   version "5.1.0"
@@ -7626,10 +7639,10 @@ type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
-typescript@^3.3.3333:
-  version "3.3.3333"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.3333.tgz#171b2c5af66c59e9431199117a3bcadc66fdcfd6"
-  integrity sha512-JjSKsAfuHBE/fB2oZ8NxtRTk5iGcg6hkYXMnZ3Wc+b2RSqejEqTaem11mHASMnFilHrax3sLK0GDzcJrekZYLw==
+typescript@^3.3.4000:
+  version "3.3.4000"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"
+  integrity sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
 
 typical@^2.4.2, typical@^2.6.0, typical@^2.6.1:
   version "2.6.1"
