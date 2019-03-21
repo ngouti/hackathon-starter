@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import { useAuth } from '../../hooks'
+import { useAuth } from '@arundo/react-auth/hooks'
 import './ProfileLink.scss'
 import * as logo from '../../images/arundo-logo.svg'
 

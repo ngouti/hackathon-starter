@@ -23,6 +23,26 @@ $mobile: 35rem;
   header, footer {
     flex: 0 auto;
   }
+
+  header + * {
+    flex: auto;
+    display: flex;
+    width: 100%;
+  }
+
+  .virtualized {
+    flex: 1;
+    display: block;
+    padding-left: 1em;
+  }
+}
+
+.tag {
+  font-size: 0.8em;
+}
+
+.ReactVirtualized__List:focus {
+  outline: none;
 }
 
 .hide-mobile {
