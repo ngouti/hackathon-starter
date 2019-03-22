@@ -12,6 +12,9 @@ import Logout from '../Pages/Logout'
 import { Home } from '../Pages/Home'
 import { Content } from './Content'
 
+// styles
+import './styles/app.scss'
+
 export const LayoutVertical = ({ children, className, ...props }) => {
   return (
     <div className={classNames('layout vertical', className)}>

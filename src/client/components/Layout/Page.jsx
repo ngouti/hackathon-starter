@@ -9,7 +9,7 @@ export function Page ({
   back,
   style,
   centeredMessage,
-  ...props,
+  ...props
 }) {
   return (
     <div
