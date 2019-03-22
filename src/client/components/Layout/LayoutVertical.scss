@@ -1,0 +1,27 @@
+.layout.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 100%;
+
+  > * {
+    display: flex;
+    flex: auto;
+  }
+
+  header, footer {
+    flex: 0 auto;
+  }
+
+  header + * {
+    flex: auto;
+    display: flex;
+    width: 100%;
+  }
+
+  .virtualized {
+    flex: 1;
+    display: block;
+    padding-left: 1em;
+  }
+}
