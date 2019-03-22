@@ -845,9 +845,9 @@
     to-fast-properties "^2.0.0"
 
 "@kwhitley/use-store@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@kwhitley/use-store/-/use-store-1.0.5.tgz#ac46ae1ec33407fb17ed89df6b83a2d34fbe5a14"
-  integrity sha512-dhKo4ORGO0AqG+GpxELYvyjWlvSiF0itGNN0Ui6Kx6ly+jSyKtmNMFtqe2191dAy+XPzmkRsJlUBgdQYz0AnwA==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@kwhitley/use-store/-/use-store-1.0.7.tgz#02f7cec827d8c5563e9bee587dd1c59ae0ad704f"
+  integrity sha512-P40uygopU8UzCY6e7RHF3bfmnYy3IVNOfS4cbYvIUqwnaQgGwMumONkCz9JJ01/6UGKlHVWQ3Siu7/aeHLNa+g==
 
 "@kwhitley/yarn-release@^1.4.1":
   version "1.4.1"

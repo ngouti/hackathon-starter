@@ -3,7 +3,7 @@ import { Router, navigate } from '@reach/router'
 import { LayoutVertical } from './Layout/LayoutVertical'
 import { Home } from './Pages/Home'
 import { Page } from './Layout/Page'
-import { MissingPage } from './Common/MissingPage'
+import { MissingPage } from './Pages/Missing'
 import { Somewhere } from './Pages/Somewhere'
 import { Inspect } from './Common/Inspect'
 import { useAuth, axios } from '@arundo/react-auth'
@@ -23,7 +23,7 @@ export default function App() {
         <MissingPage default />
       </Router>
 
-    { /*<Inspect item={user} />*/ }
+      <Inspect item={user} />
     </LayoutVertical>
   )
 }
