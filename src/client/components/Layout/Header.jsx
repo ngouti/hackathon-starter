@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 import { useAuth, axios } from '@arundo/react-auth'
 import { ProfileLink } from './ProfileLink'
 import './Header.scss'
-import * as logo from '../../images/arundo-logo.svg'
+import logo from '../../images/arundo-logo.svg'
 
 window.axios = axios
 
