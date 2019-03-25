@@ -1,5 +1,4 @@
 import React from 'react'
-import { Router, navigate } from '@reach/router'
 import { LayoutVertical } from './Layout/LayoutVertical'
 import { Home } from './Pages/Home'
 import { Page } from './Layout/Page'
@@ -16,12 +15,12 @@ export default function App() {
 
   return (
     <LayoutVertical>
-      <Router className="page-content">
+      {/*<Router className="page-content">
         <Foo path="/foo" />
         <Bar path="/bar" />
         <Somewhere path="/somewhere" />
         <MissingPage default />
-      </Router>
+      </Router>*/}
 
       <Inspect item={user} />
     </LayoutVertical>

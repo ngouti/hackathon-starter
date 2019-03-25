@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from '@reach/router'
 import { useAuth, axios } from '@arundo/react-auth'
 import { ProfileLink } from './ProfileLink'
 import './Header.scss'
