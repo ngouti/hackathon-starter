@@ -1,6 +1,6 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Core functionality for Arundo React apps",
   "main": "core.js",
   "target": "esnext",
