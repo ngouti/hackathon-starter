@@ -13,7 +13,9 @@ export const LayoutVertical = ({ children, className, ...props }) => {
     <div className={classNames('layout vertical', className)}>
       <Header />
 
-      { children }
+      <div className="content">
+        { children }
+      </div>
 
       <Footer />
     </div>

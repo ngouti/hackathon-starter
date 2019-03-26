@@ -4,8 +4,7 @@
   justify-content: stretch;
   min-height: 100%;
 
-  > * {
-    display: flex;
+  > .content {
     flex: auto;
   }
 
