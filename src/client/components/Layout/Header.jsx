@@ -28,6 +28,7 @@ export const Header = () => {
                   aria-haspopup="true"
                   onClick={(e) => setAnchor(e.currentTarget)}
                   color="inherit"
+                  className="profile-link"
                 >
                   { user && <ProfileLink user={user} /> }
                 </Button>
