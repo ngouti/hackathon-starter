@@ -1,13 +1,16 @@
 import React from 'react'
 import { useAuth } from '@arundo/react-auth/hooks'
 import './ProfileLink.scss'
-import * as logo from '../../images/arundo-logo.svg'
+import Typography from '@material-ui/core/Typography'
 
 export const ProfileLink = ({ user }) => {
   return (
     <div className="profile-link">
       <img src={user.picture} className="icon" />
-      { user.name }
+
+      <Typography variant="inherit" color="inherit">
+        { user.name }
+      </Typography>
     </div>
   )
 }

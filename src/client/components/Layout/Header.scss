@@ -1,18 +1,15 @@
 $spaceBetweenNavItems: 0.5em;
 
-header {
-  flex: auto;
-  padding: 0.9rem 1rem 1rem;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+.header {
+  background-color: rgb(38,62,89) !important;
+
+  .toolbar {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
 
   .logo {
-    flex: 0 auto;
-    height: 1.4rem;
-    align-self: flex-start;
+    height: 1.2rem;
   }
 
   .title {
@@ -20,26 +17,5 @@ header {
     text-transform: uppercase;
     font-weight: 400;
     color: #4ae;
-  }
-
-  nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: center;
-
-    a {
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    > * {
-      &:not(:first-child) {
-        border-left: 1px solid #ccc;
-        margin-left: $spaceBetweenNavItems;
-        padding-left: $spaceBetweenNavItems;
-      }
-    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@arundo/react-shell",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "Core functionality for Arundo React apps",
   "main": "core.js",
   "target": "esnext",
@@ -33,10 +33,9 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@arundo/express-starter": "^1.2.9",
-    "@arundo/spa-builder": "^1.9.8",
-    "@arundo/react-auth": "^2.0.0",
-    "@reach/router": "^1.2.1",
+    "@arundo/express-starter": "^1.2.10",
+    "@arundo/react-auth": "^2.0.7",
+    "@arundo/spa-builder": "^1.12.12",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/node": "^7.2.2",
@@ -45,6 +44,7 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@kwhitley/yarn-release": "^1.4.1",
+    "@reach/router": "^1.2.1",
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
     "bluebird": "^3.5.3",
@@ -61,14 +61,15 @@
     "np": "^4.0.2",
     "nyc": "^13.3.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-icons": "^3.5.0",
     "react-virtualized": "^9.21.0"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "@arundo/react-auth": "^2.0.0"
+    "@arundo/react-auth": "^2.0.7",
+    "@material-ui/core": "^3.9.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
