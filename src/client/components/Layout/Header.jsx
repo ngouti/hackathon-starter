@@ -1,44 +1,14 @@
-// import React from 'react'
-// import { useAuth, axios } from '@arundo/react-auth'
-// import { ProfileLink } from './ProfileLink'
-// import './Header.scss'
-// import logo from '../../images/arundo-logo.svg'
-// import
-
-// window.axios = axios
-
-// export const Header = () => {
-//   let { user, isLoggedIn, loginAction, logoutAction } = useAuth()
-
-//   return (
-//     <header>
-//       <img className="logo" src={logo} />
-
-//       <nav>
-//         { user && <ProfileLink user={user} /> }
-//         {
-//           isLoggedIn
-//           ? <a onClick={logoutAction}>Log Out</a>
-//           : <a onClick={loginAction}>Log In</a>
-//         }
-//       </nav>
-//     </header>
-//   )
-// }
-
-
 import React, { useState } from 'react'
 import { useAuth, axios } from '@arundo/react-auth'
 import { ProfileLink } from './ProfileLink'
 import './Header.scss'
-import * as logo from '../../images/arundo-logo-white.svg'
+import logo from '../../images/arundo-logo-white.svg'
 import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
 import Toolbar from '@material-ui/core/Toolbar'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import IconButton from '@material-ui/core/IconButton'
-// import AccountCircle from '@material-ui/core/AccountCircle'
 
 export const Header = () => {
   let { user, isLoggedIn, loginAction, logoutAction } = useAuth()
