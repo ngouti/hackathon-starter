@@ -3,6 +3,10 @@ $drawerClosedWidth: 3.4rem;
 $openSpeed: 0.15s;
 
 .layout.sidenav {
+  .header {
+    flex: 0 auto;
+  }
+
   .drawer > * {
     width: $drawerWidth;
     transition: all $openSpeed ease-in-out;
@@ -23,6 +27,11 @@ $openSpeed: 0.15s;
 
   .content {
     transition: all $openSpeed ease-in-out;
+    display: flex;
+    flex: 1;
+    margin-top: 3rem;
+    overflow: auto;
+    min-height: calc(100% - 3rem);
 
     &.drawer-open {
       margin-left: $drawerWidth;

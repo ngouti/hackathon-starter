@@ -11,7 +11,7 @@ export const Header = () => {
   let { isLoggedIn, loginAction } = useAuth()
 
   return (
-    <AppBar position="static" className="header">
+    <AppBar position="fixed" className="header">
       <Toolbar variant="dense" className="toolbar">
         <img className="logo" src={logo} />
 

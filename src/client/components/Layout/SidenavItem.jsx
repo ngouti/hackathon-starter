@@ -3,26 +3,25 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import { Link } from '@reach/router'
+import { Div } from './Div'
 
 const isActive = ({ isCurrent }) => {
-  console.log('isCurrent', isCurrent)
   return isCurrent ? { className: 'active' } : null
 }
 
-const NavLink = ({ children, icon, ...props }) =>
+const NavLink = ({ children, icon, component, ...props }) =>
   <Link getProps={isActive} {...props}>{ children }</Link>
 
 export const SidenavItem = ({ item }) => {
-  let { icon, name, ...props } = item
-
-  console.log('creating nav', item)
+  let { icon: Icon, name, ...props } = item
+  let Component = item.to ? NavLink : Div
 
   return (
-    <NavLink {...props}>
+    <Component {...props}>
       <ListItem button>
-        <ListItemIcon>{ icon }</ListItemIcon>
+        <ListItemIcon><Icon /></ListItemIcon>
         <ListItemText><span className="link-text">{ name }</span></ListItemText>
       </ListItem>
-    </NavLink>
+    </Component>
   )
 }
