@@ -3,7 +3,7 @@ import { Page } from '../Layout/Page'
 import { useStore } from '@kwhitley/use-store'
 
 export function Dan() {
-  let [ counter ] = useStore('counter', 0)
+  let [ counter ] = useStore('counter', 0, { persist: true })
 
   return (
     <Page centeredMessage>

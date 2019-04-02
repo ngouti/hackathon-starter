@@ -17,7 +17,7 @@ import { SidenavItem } from './SidenavItem'
 import './Sidenav.scss'
 
 export const Sidenav = ({ items, className, ...props }) => {
-  let [ isOpen, setIsOpen ] = useStore('sidenavIsOpen', true)
+  let [ isOpen, setIsOpen ] = useStore('sidenavIsOpen', true, { persist: true })
 
   return (
     <Drawer

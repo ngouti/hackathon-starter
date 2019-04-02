@@ -19,7 +19,7 @@ export const SidenavItem = ({ item }) => {
   return (
     <Component {...props}>
       <ListItem button>
-        <ListItemIcon><Icon /></ListItemIcon>
+        { Icon && <ListItemIcon><Icon /></ListItemIcon> }
         <ListItemText><span className="link-text">{ name }</span></ListItemText>
       </ListItem>
     </Component>

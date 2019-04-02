@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { LayoutVertical, Page, Sidenav, SidenavItem, LoremIpsum } from './Layout'
+import { LayoutVertical, LayoutSidenav, Page, Sidenav, SidenavItem, LoremIpsum } from './Layout'
 import { Router } from '@reach/router'
 import { useStore } from '@kwhitley/use-store'
 
@@ -11,13 +11,15 @@ import { Dan } from './Pages/Dan'
 
 const Bar = () => <Page centeredMessage><h1>Bar</h1></Page>
 
-export default function App() {
-  const [ counter, setCounter ] = useStore('counter', 0)
+const Test = () => <Page centeredMessage><h1>Test View</h1></Page>
 
-  const routes = [
+export default function App() {
+  const [ counter, setCounter ] = useStore('counter', 0, { persist: true })
+
+  const items = [
     {
-      name: 'Foo',
-      icon: MailIcon,
+      name: 'No Icon',
+      // icon: MailIcon,
       component: LoremIpsum,
       to: '/foo',
     },
@@ -26,6 +28,12 @@ export default function App() {
       icon: InboxIcon,
       component: Bar,
       to: '/bar',
+    },
+    {
+      name: 'Test View',
+      icon: InboxIcon,
+      component: Test,
+      to: '/test',
     },
     {
       name: 'Dan',
@@ -41,8 +49,9 @@ export default function App() {
   ]
 
   return (
-    <LayoutVertical navigation={routes}>
-      <LoremIpsum />
-    </LayoutVertical>
+    <Router>
+      <LayoutSidenav items={items} path="/*" />
+      <Test path="/test" />
+    </Router>
   )
 }

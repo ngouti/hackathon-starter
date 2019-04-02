@@ -1,42 +1,30 @@
 import React, { useState } from 'react'
 import { useStore } from '@kwhitley/use-store'
-import { Router } from '@reach/router'
 import classNames from 'classnames'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { Sidenav } from './Sidenav'
+import { AutoRouter } from './AutoRouter'
 import '../../styles/app.scss'
 import './LayoutSidenav.scss'
 
 export const LayoutSidenav = ({
   children,
-  navigation,
+  items,
   className,
   ...props
 }) => {
-  let [ isOpen, setIsOpen ] = useStore('sidenavIsOpen', true)
-  let classes = {}
-  let theme = {}
-  let routesWithComponents = navigation.filter(r => r.component)
+  let [ isOpen, setIsOpen ] = useStore('sidenavIsOpen', true, { persist: true })
 
   return (
     <div className={classNames('layout sidenav', className)}>
       <Header />
 
-      <Sidenav items={navigation} />
+      <Sidenav items={items} />
 
-      {
-        children
-        ? <div className={classNames('content', isOpen ? 'drawer-open' : 'drawer-closed')}>{ children }</div>
-        : routesWithComponents.length &&
-            <Router className={classNames('content', isOpen ? 'drawer-open' : 'drawer-closed')}>
-              {
-                routesWithComponents.map(({ component: C, to }, i) => (
-                  <C key={to} path={to} />
-                ))
-              }
-            </Router>
-      }
+      <AutoRouter routes={items} open={isOpen} className={classNames('content', isOpen ? 'drawer-open' : 'drawer-closed')}>
+        { children }
+      </AutoRouter>
     </div>
   )
 }
