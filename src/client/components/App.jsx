@@ -18,31 +18,31 @@ export default function App() {
 
   const items = [
     {
-      name: 'No Icon',
+      label: 'No Icon',
       // icon: MailIcon,
       component: LoremIpsum,
       to: '/foo',
     },
     {
-      name: 'Bar',
+      label: 'Bar',
       icon: InboxIcon,
       component: Bar,
       to: '/bar',
     },
     {
-      name: 'Test View',
+      label: 'Test View',
       icon: InboxIcon,
       component: Test,
       to: '/test',
     },
     {
-      name: 'Dan',
+      label: 'Dan',
       icon: InboxIcon,
       component: Dan,
       to: '/dan',
     },
     {
-      name: 'Counter++',
+      label: 'Counter++',
       icon: InboxIcon,
       onClick: () => setCounter(counter + 1),
     },
