@@ -9,7 +9,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import IconButton from '@material-ui/core/IconButton'
 import Divider from '@material-ui/core/Divider'
 
-import MenuIcon from '@material-ui/icons/MenuIcon'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import { SidenavItem } from './SidenavItem'
