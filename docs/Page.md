@@ -1,4 +1,5 @@
-# <Page>
+# Page
+[< Go Back](../README.md)
 
 Simple Page component
 

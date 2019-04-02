@@ -1,4 +1,5 @@
-# <LayoutSidenav>
+# LayoutSidenav
+[< Go Back](../README.md)
 
 Layout with collapsable side navigation panel
 
@@ -6,7 +7,7 @@ Layout with collapsable side navigation panel
 - `items` `Array of <Object>` **required**: array of item objects (see below)
 - `children` **optional**: current loading state
 
-## Item Object:
+## Item:
 - `label` `<String>`: the text displayed in the link
 - `icon` `<Component>`: Material-UI icon component
 - `to` `<String>`: internal route string (e.g. `/foo`)
