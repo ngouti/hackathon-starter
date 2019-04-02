@@ -3,10 +3,10 @@
 Layout with collapsable side navigation panel
 
 ## Props:
-- `items` `Array of <Object>` **required**: array of link objects (see below)
+- `items` `Array of <Object>` **required**: array of item objects (see below)
 - `children` **optional**: current loading state
 
-## Link Object <Object>:
+## Item Object:
 - `label` `<String>`: the text displayed in the link
 - `icon` `<Component>`: Material-UI icon component
 - `to` `<String>`: internal route string (e.g. `/foo`)
