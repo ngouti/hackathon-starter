@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classNames from 'classnames'
 import './Page.scss'
+
+const useScrollToTop = (scrollToTopOnLoad) => {
+  useEffect(() => {
+    scrollToTopOnLoad && document.body.scrollTo(0,0)
+  }, [])
+}
 
 export const Page = ({
   children,
@@ -9,11 +15,21 @@ export const Page = ({
   back,
   style,
   centeredMessage,
+  morePadding = false,
+  scrollToTopOnLoad = true,
   ...props
 }) => {
+  useScrollToTop(scrollToTopOnLoad)
+
   return (
     <div
-      className={classNames('page', centeredMessage && 'centered-message', className)}
+      className={
+        classNames(
+          'page',
+          centeredMessage && 'centered-message',
+          morePadding && 'more-padding',
+          className
+        )}
       style={style}
       {...props}
     >

@@ -1,12 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
-
 import { Header } from './Header'
 import { Footer } from './Footer'
-import './LayoutVertical.scss'
-
-// styles
 import '../../styles/app.scss'
+import './LayoutVertical.scss'
 
 export const LayoutVertical = ({ children, className, ...props }) => {
   return (
@@ -16,8 +13,6 @@ export const LayoutVertical = ({ children, className, ...props }) => {
       <div className="content">
         { children }
       </div>
-
-      <Footer />
     </div>
   )
 }

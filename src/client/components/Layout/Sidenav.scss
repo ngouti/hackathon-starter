@@ -1,0 +1,11 @@
+.sidenav {
+  .active {
+    display: block;
+    background-color: #eee;
+
+    .link-text {
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}

@@ -1,44 +1,57 @@
 import React from 'react'
-import { LayoutVertical } from './Layout/LayoutVertical'
-import { Home } from './Pages/Home'
-import { Page } from './Layout/Page'
-import { MissingPage } from './Pages/Missing'
-import { Somewhere } from './Pages/Somewhere'
-import { Inspect } from './Common/Inspect'
-import { useAuth, axios } from '@arundo/react-auth'
+import classNames from 'classnames'
+import { LayoutVertical, LayoutSidenav, Page, Sidenav, SidenavItem, LoremIpsum } from './Layout'
+import { Router } from '@reach/router'
+import { useStore } from '@kwhitley/use-store'
 
-const Foo = () => <Page centeredMessage><h1>Foo</h1></Page>
+import InboxIcon from '@material-ui/icons/MoveToInbox'
+import MailIcon from '@material-ui/icons/Mail'
+
+import { Dan } from './Pages/Dan'
+
 const Bar = () => <Page centeredMessage><h1>Bar</h1></Page>
 
+const Test = () => <Page centeredMessage><h1>Test View</h1></Page>
+
 export default function App() {
-  let { user } = useAuth()
+  const [ counter, setCounter ] = useStore('counter', 0, { persist: true })
+
+  const items = [
+    {
+      name: 'No Icon',
+      // icon: MailIcon,
+      component: LoremIpsum,
+      to: '/foo',
+    },
+    {
+      name: 'Bar',
+      icon: InboxIcon,
+      component: Bar,
+      to: '/bar',
+    },
+    {
+      name: 'Test View',
+      icon: InboxIcon,
+      component: Test,
+      to: '/test',
+    },
+    {
+      name: 'Dan',
+      icon: InboxIcon,
+      component: Dan,
+      to: '/dan',
+    },
+    {
+      name: 'Counter++',
+      icon: InboxIcon,
+      onClick: () => setCounter(counter + 1),
+    },
+  ]
 
   return (
-    <LayoutVertical>
-      {/*<Router className="page-content">
-        <Foo path="/foo" />
-        <Bar path="/bar" />
-        <Somewhere path="/somewhere" />
-        <MissingPage default />
-      </Router>*/}
-
-      <Inspect item={user} />
-    </LayoutVertical>
+    <Router>
+      <LayoutSidenav items={items} path="/*" />
+      <Test path="/test" />
+    </Router>
   )
 }
-
-// import React from 'react'
-// import { Router, LayoutStandard, useAuth } from '@arundo/react-shell'
-// import PageA from './Pages/PageA'
-// import PageB from './Pages/PageB'
-
-// export default function App() {
-//   return (
-//     <LayoutStandard>
-//       <Router>
-//         <PageA path="page-a" />
-//         <PageB path="page-b" />
-//       </Router>
-//     </LayoutStandard>
-//   )
-// }

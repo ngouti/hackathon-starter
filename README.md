@@ -23,3 +23,9 @@ export default function App() {
   )
 }
 ```
+
+# Components
+- [LayoutSidenav](/docs/LayoutSidenav.md)
+- [LayoutVertical](/docs/LayoutVertical.md)
+- [LoremIpsum](/docs/LoremIpsum.md)
+- [Page](/docs/Page.md)

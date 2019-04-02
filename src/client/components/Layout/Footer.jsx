@@ -3,5 +3,5 @@ import './Footer.scss'
 
 export const Footer = () =>
   <footer>
-    &copy;2018 Arundo Analytics
+    &copy; { (new Date).getFullYear() } Arundo Analytics
   </footer>

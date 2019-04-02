@@ -4,6 +4,10 @@
   position: relative;
   padding: 1.5rem;
 
+  &.more-padding {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+  }
+
   &.centered-message {
     display: flex;
     flex: auto;
