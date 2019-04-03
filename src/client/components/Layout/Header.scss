@@ -1,4 +1,6 @@
-$spaceBetweenNavItems: 0.5em;
+$drawerWidth: 12.5rem;
+$drawerClosedWidth: 3.4rem;
+$openSpeed: 0.15s;
 
 .header {
   background-color: rgb(38,62,89) !important;
@@ -6,10 +8,15 @@ $spaceBetweenNavItems: 0.5em;
   .toolbar {
     justify-content: space-between;
     padding: 0 1rem;
+    transition: all $openSpeed ease-in-out;
   }
 
   .logo {
     height: 1.2rem;
+    // background-color: pink;
+    // display: inline-block;
+    // height: 2rem;
+    // width: 10rem;
   }
 
   .title {
@@ -17,5 +24,13 @@ $spaceBetweenNavItems: 0.5em;
     text-transform: uppercase;
     font-weight: 400;
     color: #4ae;
+  }
+
+  &.drawer-open .toolbar {
+    margin-left: $drawerWidth;
+  }
+
+  &.drawer-closed .toolbar {
+    margin-left: $drawerClosedWidth;
   }
 }

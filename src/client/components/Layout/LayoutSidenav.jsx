@@ -18,7 +18,7 @@ export const LayoutSidenav = ({
 
   return (
     <div className={classNames('layout sidenav', className)}>
-      <Header />
+      <Header className={isOpen ? 'drawer-open' : 'drawer-closed'}/>
 
       <Sidenav items={items} />
 
