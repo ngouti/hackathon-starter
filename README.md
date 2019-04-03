@@ -12,14 +12,16 @@ yarn add -D @arundo/react-shell
 # Usage
 ```js
 import React from 'react'
-import { Layout, Sidebar, MainContent } from '@arundo/react-shell'
+import { LayoutVertical, Page } from '@arundo/react-shell'
 
 export default function App() {
   return (
-    <Layout>
-      <Sidebar />
-      <MainContent />
-    </Layout>
+    <LayoutVertical>
+      <Page>
+        <h1>Welcome</h1>
+        <p>Welcome to Arundo Apps</p>
+      </Page>
+    </LayoutVertical>
   )
 }
 ```
