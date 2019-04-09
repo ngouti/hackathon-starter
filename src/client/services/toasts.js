@@ -4,9 +4,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import './toasts.scss'
 
 export const toastType = (which) => (msg, config = {}) => {
-  let payload = typeof msg === 'String' ? msg : JSON.stringify(msg, null, 2)
+  let payload = typeof msg === 'string' ? msg : JSON.stringify(msg, null, 2)
   let bodyClassName = classNames(
-    typeof msg === 'object' && 'object',
+    typeof msg === 'object' ? 'object' : 'basic',
     payload.length > 100 && 'small',
   )
 

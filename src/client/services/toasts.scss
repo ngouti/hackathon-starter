@@ -23,12 +23,16 @@
   background: #aaa;
 }
 
-.object {
-  font-family: monospace;
-  white-space: pre;
-  overflow: auto;
+.Toastify {
+  .object {
+    font-family: monospace;
+    white-space: pre;
+    overflow: auto;
 
-  &.small {
-    font-size: 0.6rem;
+    &.small {
+      font-size: 0.6rem;
+    }
   }
 }
+
+
