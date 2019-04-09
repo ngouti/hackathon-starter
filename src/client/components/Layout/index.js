@@ -6,4 +6,5 @@ export * from './LayoutVertical'
 export * from './LoremIpsum'
 export * from './Page'
 export * from './ProfileLink'
+export * from './Toasts'
 

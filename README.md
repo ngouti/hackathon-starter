@@ -27,7 +27,10 @@ export default function App() {
 ```
 
 # Components
-- [LayoutSidenav](/docs/LayoutSidenav.md)
-- [LayoutVertical](/docs/LayoutVertical.md)
-- [LoremIpsum](/docs/LoremIpsum.md)
-- [Page](/docs/Page.md)
+- [LayoutSidenav](/docs/components/LayoutSidenav.md)
+- [LayoutVertical](/docs/components/LayoutVertical.md)
+- [LoremIpsum](/docs/components/LoremIpsum.md)
+- [Page](/docs/components/Page.md)
+
+# Services
+- [services/toasts](/docs/services/toasts.md)

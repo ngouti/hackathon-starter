@@ -1,5 +1,5 @@
 # Page
-[< Go Back](../README.md)
+[< Go Back](../../README.md)
 
 Simple Page component
 
@@ -13,11 +13,11 @@ Simple Page component
 import React from 'react'
 import { Page } from '@arundo/react-shell'
 
-export default function MyPage() {
+export const MyPage = () => {
   return (
     <Page>
       <h1>Big Title</h1>
-      <p>Some content here...</p?
+      <p>Some content here...</p>
     </Page>
   )
 }

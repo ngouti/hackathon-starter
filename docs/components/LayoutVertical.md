@@ -1,5 +1,5 @@
 # LayoutVertical
-[< Go Back](../README.md)
+[< Go Back](../../README.md)
 
 Layout with only top header bar,
 
@@ -11,7 +11,7 @@ Layout with only top header bar,
 import React from 'react'
 import { LayoutVertical, Page } from '@arundo/react-shell'
 
-export default function App() {
+export const App = () => {
   return (
     <LayoutVertical>
       <Page centeredMessage>

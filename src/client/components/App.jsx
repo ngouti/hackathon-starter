@@ -10,8 +10,8 @@ import MailIcon from '@material-ui/icons/Mail'
 import { Dan } from './Pages/Dan'
 
 const Bar = () => <Page centeredMessage><h1>Bar</h1></Page>
-
 const Test = () => <Page centeredMessage><h1>Test View</h1></Page>
+const Filler = () => <LoremIpsum page />
 
 export default function App() {
   const [ counter, setCounter ] = useStore('counter', 0, { persist: true })
@@ -20,7 +20,7 @@ export default function App() {
     {
       label: 'No Icon',
       // icon: MailIcon,
-      component: LoremIpsum,
+      component: Filler,
       to: '/foo',
     },
     {

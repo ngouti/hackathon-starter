@@ -1,5 +1,5 @@
 # LayoutSidenav
-[< Go Back](../README.md)
+[< Go Back](../../README.md)
 
 Layout with collapsable side navigation panel
 
@@ -36,7 +36,7 @@ import MailIcon from '@material-ui/icons/Mail'
 
 const Foo = () => <Page>Bar</Page>
 
-export default function App() {
+export const App = () => {
   const items = [
     {
       label: 'Lorem Ipsum',
@@ -73,7 +73,7 @@ import MailIcon from '@material-ui/icons/Mail'
 
 const Foo = () => <Page>Bar</Page>
 
-export default function App() {
+export const App = () => {
   const items = [
     {
       label: 'Lorem Ipsum',

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useStore } from '@kwhitley/use-store'
+import { Toasts } from './Toasts'
 import classNames from 'classnames'
 import { Header } from './Header'
 import { Footer } from './Footer'
@@ -25,6 +26,8 @@ export const LayoutSidenav = ({
       <AutoRouter routes={items} open={isOpen} className={classNames('content', isOpen ? 'drawer-open' : 'drawer-closed')}>
         { children }
       </AutoRouter>
+
+      <Toasts />
     </div>
   )
 }
