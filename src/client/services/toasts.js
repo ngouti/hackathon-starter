@@ -1,7 +1,5 @@
 import { toast } from 'react-toastify'
 import classNames from 'classnames'
-import 'react-toastify/dist/ReactToastify.css'
-import './toasts.scss'
 
 export const toastType = (which) => (msg, config = {}) => {
   let payload = typeof msg === 'string' ? msg : JSON.stringify(msg, null, 2)
