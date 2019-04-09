@@ -1,29 +1,29 @@
-.toast-progress {
-  background: rgba(0,0,0,0.1);
-}
-
-.Toastify__toast {
-  border-radius: 0.3rem;
-  padding: 1rem 1.2rem;
-}
-
-.Toastify__toast--success {
-  background: #67bc6c;
-}
-
-.Toastify__toast--error {
-  background: #e76c5e;
-}
-
-.Toastify__toast--warning {
-  background: #f1c44f;
-}
-
-.Toastify__toast--info {
-  background: #aaa;
-}
-
 .Toastify {
+  .toast-progress {
+    background: rgba(0,0,0,0.1);
+  }
+
+  .Toastify__toast {
+    border-radius: 0.3rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .Toastify__toast--success {
+    background: #67bc6c;
+  }
+
+  .Toastify__toast--error {
+    background: #e76c5e;
+  }
+
+  .Toastify__toast--warning {
+    background: #f1c44f;
+  }
+
+  .Toastify__toast--info {
+    background: #aaa;
+  }
+
   .object {
     font-family: monospace;
     white-space: pre;
