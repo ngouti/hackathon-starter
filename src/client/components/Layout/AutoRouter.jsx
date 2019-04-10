@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 export const AutoRouter = ({
   children,
-  routes,
+  routes = [],
   className,
 }) => {
   let routesWithComponents = routes.filter(r => r.component)
