@@ -9,17 +9,27 @@ const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: 'active' } : null
 }
 
-const NavLink = ({ children, icon, component, ...props }) =>
+const NavLink = ({
+  children,
+  component,
+  icon,
+  ...props
+}) =>
   <Link getProps={isActive} {...props}>{ children }</Link>
 
-export const SidenavItem = ({ item }) => {
+
+export const NavItem = ({
+  className,
+  item,
+  icon = true
+}) => {
   let { icon: Icon, label, ...props } = item
   let Component = item.to ? NavLink : Div
 
   return (
     <Component {...props}>
-      <ListItem button>
-        { Icon && <ListItemIcon><Icon /></ListItemIcon> }
+      <ListItem className="item" button>
+        { Icon && icon && <ListItemIcon><Icon /></ListItemIcon> }
         <ListItemText><span className="link-text">{ label }</span></ListItemText>
       </ListItem>
     </Component>

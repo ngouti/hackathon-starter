@@ -7,14 +7,17 @@ import logo from '../../images/arundo-logo-white.svg'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
+import { Topnav } from './Topnav'
 
-export const Header = ({ className }) => {
+export const Header = ({ className, items }) => {
   let { isLoggedIn, loginAction } = useAuth()
 
   return (
     <AppBar position="fixed" className={classNames('header', className)}>
       <Toolbar variant="dense" className="toolbar">
         <img className="logo" src={logo} />
+
+        { items && <Topnav items={items} /> }
 
         {
           isLoggedIn

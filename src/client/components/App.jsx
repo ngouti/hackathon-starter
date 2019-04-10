@@ -49,6 +49,10 @@ export default function App() {
   ]
 
   return (
+    <LayoutVertical items={items} />
+  )
+
+  return (
     <Router>
       <LayoutSidenav items={items} path="/*" />
       <Test path="/test" />
