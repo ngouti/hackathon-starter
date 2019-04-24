@@ -1,61 +1,29 @@
 import React from 'react'
 import classNames from 'classnames'
-import { LayoutVertical, LayoutSidenav, Page, Sidenav, SidenavItem, LoremIpsum } from './Layout'
 import { Router } from '@reach/router'
-import { useStore } from '@kwhitley/use-store'
+import styled from 'styled-components'
+import '../styles/app.scss'
 
-import InboxIcon from '@material-ui/icons/MoveToInbox'
-import MailIcon from '@material-ui/icons/Mail'
+const CenteredDiv = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 2em 5em;
+  font-size: 4vmax;
 
-import { Dan } from './Pages/Dan'
-
-const Bar = () => <Page centeredMessage><h1>Bar</h1></Page>
-const Test = () => <Page centeredMessage><h1>Test View</h1></Page>
-const Filler = () => <LoremIpsum page />
+  em {
+    color: pink;
+    font-style: normal;
+    font-size: 1.3em;
+  }
+`
 
 export default function App() {
-  const [ counter, setCounter ] = useStore('counter', 0, { persist: true })
-
-  const items = [
-    {
-      label: 'No Icon',
-      // icon: MailIcon,
-      component: Filler,
-      to: '/foo',
-    },
-    {
-      label: 'Bar',
-      icon: InboxIcon,
-      component: Bar,
-      to: '/bar',
-    },
-    {
-      label: 'Test View',
-      icon: InboxIcon,
-      component: Test,
-      to: '/test',
-    },
-    {
-      label: 'Dan',
-      icon: InboxIcon,
-      component: Dan,
-      to: '/dan',
-    },
-    {
-      label: 'Counter++',
-      icon: InboxIcon,
-      onClick: () => setCounter(counter + 1),
-    },
-  ]
-
   return (
-    <LayoutVertical items={items} />
-  )
-
-  return (
-    <Router>
-      <LayoutSidenav items={items} path="/*" />
-      <Test path="/test" />
-    </Router>
+    <CenteredDiv>
+      Welcome to the Arundo <em>Women's 2019 Hackathon</em>
+    </CenteredDiv>
   )
 }

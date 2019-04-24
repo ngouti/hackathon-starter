@@ -1,4 +1,4 @@
-import express from '@arundo/express-starter'
+import express from '@supergeneric/express-server'
 import api from './api'
 
 const app = express()

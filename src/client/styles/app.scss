@@ -1,6 +1,16 @@
-$mobile: 35rem;
-
-@import './base';
+body {
+  color: #222;
+  background-color: #fff;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 16pt;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
 
 #app {
   display: flex;
@@ -10,16 +20,3 @@ $mobile: 35rem;
   overflow: hidden;
 }
 
-.tag {
-  font-size: 0.8em;
-}
-
-.ReactVirtualized__List:focus {
-  outline: none;
-}
-
-.hide-mobile {
-  @media screen and (max-width: $mobile) {
-    display: none;
-  }
-}

@@ -1,4 +1,10 @@
 pre.inspect {
+  background-color: #eee;
+  padding: 1.2em;
+  font-size: 0.85rem;
+  border-radius: 0.2rem;
+  text-align: left;
   max-width: 100%;
-  overflow-x: auto;
+  overflow: scroll;
+  margin: 0;
 }
