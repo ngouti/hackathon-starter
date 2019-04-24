@@ -1,36 +1,18 @@
-A component library for core React functionality in Arundo apps.
+Arundo Women's 2019 Hackathon Starter Kit
 
 # Requirements
 - [Node (current, v10+)](https://nodejs.org/en/download/current/)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
 # Installation
+1. Fork this repo
+2. Clone/download your forked repo locally
+3. Run the following (within the repo):
 ```
-yarn add -D @arundo/react-shell
-```
-
-# Usage
-```js
-import React from 'react'
-import { LayoutVertical, Page } from '@arundo/react-shell'
-
-export default function App() {
-  return (
-    <LayoutVertical>
-      <Page>
-        <h1>Welcome</h1>
-        <p>Welcome to Arundo Apps</p>
-      </Page>
-    </LayoutVertical>
-  )
-}
+yarn
+yarn dev
 ```
 
-# Components
-- [LayoutSidenav](/docs/components/LayoutSidenav.md)
-- [LayoutVertical](/docs/components/LayoutVertical.md)
-- [LoremIpsum](/docs/components/LoremIpsum.md)
-- [Page](/docs/components/Page.md)
-
-# Services
-- [services/toasts](/docs/services/toasts.md)
+# Getting Started
+- For client side, effective entry point is `src/client/components/App.jsx`
+- For server side, effective entry point is `src/server/index.js`
