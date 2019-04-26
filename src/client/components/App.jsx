@@ -45,10 +45,6 @@ export default function App() {
     <CenteredDiv>
       <p>Welcome to the Arundo <em>Women's 2019 Hackathon</em></p>
 
-      <StyledPre>
-        { JSON.stringify({ isLoggedIn }, null, 2) }
-      </StyledPre>
-
       {
         isLoggedIn
         ? <LoginLogout onClick={logoutAction}>Logout</LoginLogout>

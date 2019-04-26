@@ -14,7 +14,7 @@ globalStore
 // check and alert devs of missing (required) .env variables
 if (!process.env.CLIENT_AUTH0_DOMAIN) console.error('[Authentication]', 'please add CLIENT_AUTH0_DOMAIN to your .env file or environment variables')
 if (!process.env.CLIENT_AUTH0_CLIENT_ID) console.error('[Authentication]', 'please add CLIENT_AUTH0_CLIENT_ID to your .env file or environment variables')
-if (!process.env.CLIENT_AUTH0_AUDIENCE) console.error('[Authentication]', 'please add CLIENT_AUTH0_AUDIENCE to your .env file or environment variables')
+// if (!process.env.CLIENT_AUTH0_AUDIENCE) console.error('[Authentication]', 'please add CLIENT_AUTH0_AUDIENCE to your .env file or environment variables')
 
 export class Auth {
   accessToken
@@ -27,7 +27,7 @@ export class Auth {
   auth0 = new auth0.WebAuth({
     domain: process.env.CLIENT_AUTH0_DOMAIN, //'arundo-develop.auth0.com', // ENV
     clientID: process.env.CLIENT_AUTH0_CLIENT_ID, //'zSWL2GxGu4ONSGRvyxbkqiLNU7MAYdYE', // ENV
-    audience: process.env.CLIENT_AUTH0_AUDIENCE, //'https://develop.arundo.com', // ENV
+    // audience: process.env.CLIENT_AUTH0_AUDIENCE, //'https://develop.arundo.com', // ENV
     redirectUri: process.env.CLIENT_AUTH0_CALLBACK || location.origin,
     responseType: 'token id_token',
     scope: 'openid email profile'
