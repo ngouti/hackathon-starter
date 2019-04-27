@@ -16,3 +16,10 @@ yarn dev
 # Getting Started
 - For client side, effective entry point is `src/client/components/App.jsx`
 - For server side, effective entry point is `src/server/index.js`
+
+# Example API & Data source (Nest thermostat)
+```js
+http://localhost:3000/api/thermostat?startDate=2016/11/01&endDate=2016/11/02
+
+# raw data.csv & data.json are located in /src/server/data
+```
