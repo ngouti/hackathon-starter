@@ -1,21 +1,36 @@
 import React from 'react';
 import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries} from 'react-vis';
 
-let time = 5
+
+var time;
+
 const Chart = (props) => {
 
+
     const current_temp_data = props.data.map((d)=> {
-        return {x: d.time.split(' ')[1], 
+            time = d.time.split(' ')[1];
+            time = time.split(':')
+            time.pop()
+            time.join(':')
+        return {x: time.join(':'), 
         y: d.current_temp}
     });
 
     const outside_temp_data = props.data.map((d)=> {
-        return {x: d.time.split(' ')[1], 
+        time = d.time.split(' ')[1];
+            time = time.split(':')
+            time.pop()
+            time.join(':')
+        return {x: time.join(':'), 
         y: d.outside_temp}
     });
 
     const target_temp_data = props.data.map((d)=> {
-        return {x: d.time.split(' ')[1], 
+        time = d.time.split(' ')[1];
+        time = time.split(':')
+        time.pop()
+        time.join(':')
+        return {x: time.join(':'), 
         y: d.target_temp}
     });
 
