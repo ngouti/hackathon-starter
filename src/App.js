@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavigationBar from './Components/NavigationBar.js'
-// import Navs from './Components/Navs.js'
 import {data} from './datasample.js'
 import Chart from './Components/chart'
 
