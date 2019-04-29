@@ -3,8 +3,17 @@ import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries
 
 const Chart = (props) => {
 
+    
+    function date() {
+        props.data.map((d) => {
+            var full_date = d.time.split(' ');
+            // if(full_date[0] === )
+            console.log(d.time.split(' '))
+        })
+    }
+date()
     const dataArr = props.data.map((d)=> {
-        return {x: d.time, 
+        return {x: d.time.split(' ')[1], 
         y: d.current_temp}
     });
 
@@ -19,7 +28,7 @@ const Chart = (props) => {
             <YAxis title="Temp" />
                 <LineSeries
                     data={dataArr}
-                    style={{stroke: 'violet', strokeWidth: 3}}/>
+                    style={{stroke: 'blue', strokeWidth: 3}}/>
         </XYPlot>
     );
 }
